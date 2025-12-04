@@ -7,11 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "lint": "eslint .",
     "lint:fix": "eslint ./src --fix",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "pre-push": "pnpm test && pnpm build"
   },
   "dependencies": {
     "react": "^19.2.0",
