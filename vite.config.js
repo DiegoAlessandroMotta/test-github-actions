@@ -10,4 +10,8 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {},
+    ssr: false,
+  },
 })
